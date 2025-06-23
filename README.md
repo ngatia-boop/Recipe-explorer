@@ -55,7 +55,7 @@ npm install -g json-server
 git clone https://github.com/ngatia-boop/recipe-explorer.git
 cd recipe-explorer
 
-**Start the JSON Server**
+Start the JSON Server
 ```bash
 json-server --watch db.json
 
