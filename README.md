@@ -2,7 +2,7 @@
 
 ## Project Description
 
-**Recipe Explorer** is a functional single-page web application that allows users to explore, filter, and interact with a collection of recipes. It is built with HTML, CSS, and JavaScript, and uses `json-server` to simulate a backend API. The app demonstrates asynchronous data fetching, dynamic DOM updates, and user interaction with multiple event types.
+**Recipe Explorer** is a functional, single-page web application that enables users to explore, filter, and interact with a curated collection of recipes. It is built with HTML, CSS, and JavaScript, and uses `json-server` to simulate a backend API. The app demonstrates asynchronous data fetching, dynamic DOM updates, and user interaction with multiple event types.
 
 ---
 
@@ -29,7 +29,7 @@
 - 📂 **Category Filter** — Filters recipes by selected category
 - 🌙 **Dark Mode Toggle** — Switches between light and dark themes
 
-Each event uses `.addEventListener()` with its own callback function.
+Each event uses `.addEventListener()` with its callback function.
 
 ---
 
@@ -59,11 +59,12 @@ cd recipe-explorer
 ```bash
 json-server --watch db.json
 
-**open index.html in your browser to view the app**
+Open index.html in your browser to view the app.
 
 ##File Structure 
 ```
 recipe-explorer/
+├──images            #images for the recipes
 ├── db.json          # Local JSON database
 ├── index.html       # Main HTML file
 ├── styles.css       # Styling
@@ -96,7 +97,7 @@ yaml
 
 ---
 
-Let me know if you want this README customized further (e.g. links to a GitHub repo, screenshots, or added stretch goals like "favorite" recipes).
+Please let me know if you would like this README customized further (e.g., links to a GitHub repository, screenshots, or additional stretch goals, such as "favorite" recipes).
 
 
 
