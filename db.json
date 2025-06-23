@@ -1,0 +1,25 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Avocado Toast",
+      "ingredients": ["Bread", "Avocado", "Lemon", "Salt"],
+      "category": "Breakfast",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Grilled Chicken Salad",
+      "ingredients": ["Chicken", "Lettuce", "Tomato", "Cucumber"],
+      "category": "Lunch",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Spaghetti Carbonara",
+      "ingredients": ["Pasta", "Egg", "Cheese", "Bacon"],
+      "category": "Dinner",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}
