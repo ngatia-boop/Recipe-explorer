@@ -1,3 +1,33 @@
 body {
-    background: blueviolet;
+    font-family: sans-serif;
+    background-color: wheat;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #222;
+    color: #eee;
+}
+
+header {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.recipe-card img {
+    width: 20%;
+    max-width: 200px;
 }

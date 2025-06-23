@@ -7,6 +7,20 @@
     <title>Recipe Explorer</title>
   </head>
   <body>
+    <header>
+        <h1>Recipe Explorer</h1>
+        <input type="text" id="searchInput" placeholder="Search recipes..." />
+        <select id="categoryFilter">
+         <option value="All">All</option>
+         <option value="Breakfast">Breakfast</option>
+         <option value="Lunch">Lunch</option>
+         <option value="Dinner">Dinner</option>
+        </select>
+        <button id="themeToggle">Toggle Theme</button>
+    </header>
+
+    <main id="recipeContainer"></main>
+
     <script src="main.js"></script>
   </body>
 </html>
