@@ -24,6 +24,7 @@ function displayRecipes(recipes) {
       <img src="${recipe.image}" alt="${recipe.name}" />
       <p><strong>Category:</strong> ${recipe.category}</p>
       <p><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
+    <p><strong>Instructions:</strong> ${recipe.instructions}</p>
     `;
     recipeContainer.appendChild(card);
   });

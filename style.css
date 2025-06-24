@@ -31,3 +31,19 @@ header {
     width: 20%;
     max-width: 200px;
 }
+
+.heart {
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.heart.liked {
+    color: red !important;
+}
+
+body.dark-mode.heart.liked {
+    color: red !important;
+}
