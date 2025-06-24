@@ -60,7 +60,7 @@ cd recipe-explorer
 json-server --watch db.json
 
 ##Open the index.html file in your browser to view the app.
-
+```
 ##File Structure 
 ```
 recipe-explorer/
