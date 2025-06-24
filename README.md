@@ -79,8 +79,9 @@ recipe-explorer/
       "id": 1,
       "name": "Avocado Toast",
       "ingredients": ["Bread", "Avocado", "Lemon", "Salt"],
+      "instructions": "Toast bread, mash avocado, mix with lemon and salt, spread and serve.",
       "category": "Breakfast",
-      "image": "https://via.placeholder.com/150"
+      "image": "images/avocado-toast.jpg"
     }
   ]
 }
