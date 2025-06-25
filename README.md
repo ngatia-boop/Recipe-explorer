@@ -20,7 +20,9 @@
 - ✅ Search recipes by name
 - ✅ Toggle between light and dark themes
 - ✅ Responsive and dynamic layout with event-driven interactivity
-
+- ✅ Toggle over favorite meals
+- ✅ Add new recipes and categorize them
+- ✅ View details of the dish on a pop-up
 ---
 
 ## Events Implemented
@@ -28,7 +30,11 @@
 - 🔍 **Search Input** — Filters recipes based on user input
 - 📂 **Category Filter** — Filters recipes by selected category
 - 🌙 **Dark Mode Toggle** — Switches between light and dark themes
-
+- ❤️ **Favourite Toggle** - Switches between favourite and default mode
+- ❌ **Delete button** - Deletes a recipe permanently
+- 📝 **Detail pop-up** -Gives details about the recipes
+- ➕ **Add Recipe Input** -Allows one to add a new recipe, including the  image and the category of the dish
+  
 Each event uses `.addEventListener()` with its callback function.
 
 ---
@@ -64,7 +70,7 @@ json-server --watch db.json
 ##File Structure 
 ```
 recipe-explorer/
-├──images            #images for the recipes
+├──images            #images for the recipes and recipe cover 
 ├── db.json          # Local JSON database
 ├── index.html       # Main HTML file
 ├── styles.css       # Styling
@@ -81,7 +87,8 @@ recipe-explorer/
       "ingredients": ["Bread", "Avocado", "Lemon", "Salt"],
       "instructions": "Toast bread, mash avocado, mix with lemon and salt, spread and serve.",
       "category": "Breakfast",
-      "image": "images/avocado-toast.jpg"
+      "image": "images/avocado-toast.jpg",
+      "isFavourite": "false"
     }
   ]
 }
