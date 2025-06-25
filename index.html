@@ -10,21 +10,63 @@
 
     <link rel="stylesheet" href="./style.css" />
     <title>Recipe Explorer</title>
+
   </head>
   <body>
     <header>
-        <h1>Recipe Explorer</h1>
+        <h1 id="title">Recipe Explorer</h1>
         <input type="text" id="searchInput" placeholder="Search recipes..." />
         <select id="categoryFilter">
          <option value="All">All</option>
-         <option value="Breakfast">Breakfast</option>
-         <option value="Lunch">Lunch</option>
-         <option value="Dinner">Dinner</option>
+         <option value="breakfast">Breakfast</option>
+         <option value="lunch">Lunch</option>
+         <option value="dinner">Dinner</option>
         </select>
         <button id="themeToggle">Toggle Theme</button>
     </header>
 
-    <main id="recipeContainer"></main>
+    <!-- Add-Recipe form -->
+<section class="add-recipe">
+  <h2>Add New Recipe</h2>
+
+  <form id="recipeForm">
+    <input  id="newTitle"  placeholder="Recipe title"           required />
+    <input  id="newImage"  placeholder="Image URL (optional)"  />
+
+ <select id="newCategory" required>
+    <option value="" disabled selected>Choose category</option>
+    <option value="breakfast">Breakfast</option>
+    <option value="lunch">Lunch</option>
+    <option value="dinner">Dinner</option>
+    <option value="dessert">Dessert</option>
+  </select>
+
+    <textarea id="newIngredients"  placeholder="Ingredients (comma-separated)"   required></textarea>
+    <textarea id="newInstructions" placeholder="Instructions"                    required></textarea>
+    <button type="submit">Add Recipe</button>
+  </form>
+</section>
+
+<!-- Where every recipe card will be injected -->
+<section id="recipesContainer"></section>
+
+
+   <main id="recipeContainer"></main> 
+
+   <!-- Recipe Detail Modal -->
+<div id="recipeModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" src="" alt="Recipe Image" />
+    <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+    <p><strong>Ingredients:</strong> <span id="modalIngredients"></span></p>
+    <p><strong>Instructions:</strong> <span id="modalInstructions"></span></p>
+  </div>
+</div>
+
+<div class="background-overlay"></div>
+<div class="bg-image"></div>
 
     <script src="main.js"></script>
   </body>

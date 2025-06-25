@@ -1,11 +1,40 @@
 body {
-    font-family: sans-serif;
+    background-image: url("images/Recipe-Explorer-Cover.jpg");
+    background-size: 300px;
+    background-repeat: repeat;
+    background-position: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    font-family:  Arial,;
     background-color: wheat;
     color: black;
     margin: 0;
     padding: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
+.bg-image {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 300px; 
+  height: auto;
+  background-image: url('images/Recipe-Explorer-Cover.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.5; 
+}
+
+
 
 body.dark {
     background-color: #222;
@@ -13,8 +42,10 @@ body.dark {
 }
 
 header {
-    display: flex;
-    gap: 10px;
+    display: flexbox;
+    text-align: center;
+    gap: 30px;
+    font-size: larger;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
@@ -24,7 +55,7 @@ header {
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 10px;
-    background: #f9f9f9;
+    background: brown;
 }
 
 .recipe-card img {
@@ -46,6 +77,157 @@ header {
   color: #888;               
   transition: color 0.2s;
 }
+
 .heart.favorited {
-  color: crimson;            
+  color: crimson;
+}
+
+/* ✅ Keep the rest of the CSS below */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#search, #filter {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* --- Add-Recipe section --- */
+.add-recipe {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.add-recipe form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-recipe input,
+.add-recipe textarea,
+.add-recipe button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-recipe button {
+  cursor: pointer;
+}
+
+/* --- Recipe cards --- */
+.recipe-card {
+  max-width: 450px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  margin: 12px;
+  text-align: center;
+}
+
+.recipe-card p {
+  margin: 8px 12px;
+  line-height: 1.4;
+}
+
+.delete-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: crimson;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.heart {
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* --- Modal styles --- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  color: #000;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body.dark .modal-content {
+  background-color: #222;
+  color: #f1f1f1;
 }

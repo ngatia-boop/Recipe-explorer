@@ -10,7 +10,7 @@
         "Salt"
       ],
       "instructions": "Toast bread, mash avocado, mix with lemon and salt, spread and serve.",
-      "category": "Breakfast",
+      "category": "breakfast",
       "image": "images/avocado-toast.jpg",
       "isFavorite": false
     },
@@ -24,7 +24,7 @@
         "Cucumber"
       ],
       "instructions": "Grill the chicken untill fully cooked. Chop the lettuce,tomato and cucumber. Combine all ingredients in a bowl and toss lightly.",
-      "category": "Lunch",
+      "category": "lunch",
       "image": "images/chicken-salad.jpg",
       "isFavorite": false
     },
@@ -38,7 +38,7 @@
         "Bacon"
       ],
       "instructions": "Boil the pasta till al dente. Cook bacon until crisp. In a bowl, mix eggs and cheese. Drain pasta, then quickly mix with egg mixture and bacon. Serve immediatley.",
-      "category": "Dinner",
+      "category": "dinner",
       "image": "images/spaghetti-carbonara.jpg",
       "isFavorite": false
     }
