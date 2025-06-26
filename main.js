@@ -1,3 +1,5 @@
+const API_ROOT = "https://recipe-explorer-ue0r.onrender.com/";
+
 const recipeContainer = document.getElementById("recipeContainer");
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
@@ -29,13 +31,13 @@ modal.addEventListener("click", (e) => {
 let allRecipes = [];
    
 
-fetch('http://localhost:3000/recipes')
+fetch('https://recipe-explorer-ue0r.onrender.com/')
  .then(res => res.json())
  .then(data => data.forEach(renderRecipe))
  .catch(err => console.error('Initial GET error', err));
 
 
-const BASE_URL = "http://localhost:3000/recipes";   // adjust if needed
+const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/";   // adjust if needed
 
 
 const form        = document.getElementById("recipeForm");
