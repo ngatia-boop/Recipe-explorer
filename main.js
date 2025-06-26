@@ -1,4 +1,4 @@
-const API_ROOT = "https://recipe-explorer-ue0r.onrender.com/";
+const API_URL = "https://recipe-explorer-ue0r.onrender.com/";
 
 const recipeContainer = document.getElementById("recipeContainer");
 const searchInput = document.getElementById("searchInput");
@@ -37,7 +37,7 @@ fetch('https://recipe-explorer-ue0r.onrender.com/')
  .catch(err => console.error('Initial GET error', err));
 
 
-const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/";   // adjust if needed
+const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/";  
 
 
 const form        = document.getElementById("recipeForm");
