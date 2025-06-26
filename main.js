@@ -27,17 +27,8 @@ modal.addEventListener("click", (e) => {
 });
 
 let allRecipes = [];
-   
 
-fetch('https://recipe-explorer-ue0r.onrender.com/')
- .then(res => res.json())
- .then(data => data.forEach(renderRecipe))
- .catch(err => console.error('Initial GET error', err));
-
-
-const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/";  
-
-const API_URL = "https://recipe-explorer-ue0r.onrender.com/recipes"; // no trailing slash
+const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/recipes";  
 
 async function loadRecipes() {
   try {
@@ -67,8 +58,8 @@ fetchRecipes();
      fetch(BASE_URL)
        .then(r => r.json())
        .then(data => {
-         allRecipes = data; // Store fetched recipes in allRecipes
-         console.log("Fetched Recipes:", allRecipes); // Log fetched recipes
+         allRecipes = data; 
+         console.log("Fetched Recipes:", allRecipes); 
          recipesBox.innerHTML = "";          
          data.forEach(renderRecipe);
        })
