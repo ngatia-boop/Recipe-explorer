@@ -6,10 +6,12 @@
 
 ---
 
-## Tech Stack
+| Live site | Live API |
+|-----------|----------|
+| **Frontend:** https://ngatia-boop.github.io/Recipe-explorer/ | **Backend:** https://recipe-explorer-ue0r.onrender.com/recipes |
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** JSON Server (mock API using `db.json`)
+> The Render service hibernates after ~15 min of inactivity.  
+The first request can take 10-30 seconds; subsequent calls are instant.
 
 ---
 
@@ -25,6 +27,16 @@
 - ✅ View details of the dish on a pop-up
 ---
 
+## Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Frontend | **HTML • CSS • Vanilla JavaScript** |
+| Backend | **json-server @ 0.17** (hosted on Render) |
+| Hosting | GitHub Pages (frontend) • Render (backend) |
+
+---
+
 ## Events Implemented
 
 - 🔍 **Search Input** — Filters recipes based on user input
@@ -38,6 +50,18 @@
 Each event uses `.addEventListener()` with its callback function.
 
 ---
+🗄️ API Endpoints
+All live endpoints are under
+https://recipe-explorer-ue0r.onrender.com/recipes
+
+Method	Endpoint	   Action
+GET   	/recipes	    lists all recipes
+GET	    /recipes/:id	single recipe
+POST	  /recipes	    add recipe
+PATCH	  /recipes/:id	partial update
+DELETE	/recipes/:id	remove recipe
+
+---
 
 ## Array Methods Used
 
@@ -45,31 +69,34 @@ Each event uses `.addEventListener()` with its callback function.
 - `.filter()` — For search and category filtering
 
 ---
+🛠 Main JavaScript Concepts
+fetch API for async requests
 
-## Getting Started
+Promise chaining & async/await
 
-### Prerequisites
+Event delegation (addEventListener)
 
-- Node.js and npm installed
-- JSON Server installed globally (or as a dev dependency)
+Array methods: .forEach, .filter
+
+Dynamic DOM creation/updates
+
+Local state caching (allRecipes array)
+
+---
+## 🚀 Quick Start
+
+### 1 · Clone & run the frontend only (no server required)
 
 ```bash
-npm install -g json-server
+git clone https://github.com/ngatia-boop/Recipe-explorer.git
+cd Recipe-explorer
+# open index.html in Live Server or any static server
 
-## Installation
-```bash
-git clone https://github.com/ngatia-boop/recipe-explorer.git
-cd recipe-explorer
-
-##Start the JSON Server
-```bash
-json-server --watch db.json
-
-##Open the index.html file in your browser to view the app.
 ```
 ##File Structure 
 ```
 recipe-explorer/
+├──package.json
 ├──images            #images for the recipes and recipe cover 
 ├── db.json          # Local JSON database
 ├── index.html       # Main HTML file
@@ -77,6 +104,27 @@ recipe-explorer/
 ├── main.js          # JavaScript logic
 └── README.md        # Project documentation
 ```
+
+---
+(OPTIONAL) Run your local API
+If you want to hack on the data without touching production:
+
+bash
+npm install           # installs json-server locally
+npm start             # json-server --watch db.json --port 3000
+
+Then change one line in main.js:
+
+ js
+
+// for local dev only
+const BASE_URL = "http://localhost:3000/recipes";
+
+---
+
+
+
+
 
 ##sample data format (in bd.json)
 {
@@ -101,11 +149,13 @@ Moringa School - Software Engineering Program
 ##License
 This project is licensed for educational purposes under the Mornga School guidelines.
 
-yaml
+Copy-paste this over your existing `README.md`, commit, and push:
 
----
+```bash
+git add README.md
+git commit -m "Docs: update for Render API & live links"
+git push
 
-Please let me know if you would like this README customized further (e.g., links to a GitHub repository, screenshots, or additional stretch goals, such as "favorite" recipes).
 
 
 
