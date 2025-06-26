@@ -155,6 +155,7 @@ form.addEventListener("submit", e => {
 function displayRecipes(recipes) {
   recipesBox.innerHTML = ""; 
   recipes.forEach((recipe) => {
+    const recipeList = document.getElementById("recipe-list"); // Make sure this div exists in HTML
     const card = document.createElement("div");
     card.className = "recipe-card";
     card.innerHTML = `
