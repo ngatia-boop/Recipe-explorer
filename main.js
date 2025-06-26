@@ -1,5 +1,3 @@
-const API_URL = "https://recipe-explorer-ue0r.onrender.com/";
-
 const recipeContainer = document.getElementById("recipeContainer");
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
@@ -38,6 +36,20 @@ fetch('https://recipe-explorer-ue0r.onrender.com/')
 
 
 const BASE_URL = "https://recipe-explorer-ue0r.onrender.com/";  
+
+const API_URL = "https://recipe-explorer-ue0r.onrender.com/recipes"; // no trailing slash
+
+async function loadRecipes() {
+  try {
+    const res = await fetch(API_URL, { headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const recipes = await res.json();
+    recipes.forEach(displayRecipe);
+  } catch (err) {
+    console.error("Initial GET error:", err);
+  }
+}
+
 
 
 const form        = document.getElementById("recipeForm");
