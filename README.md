@@ -122,10 +122,6 @@ const BASE_URL = "http://localhost:3000/recipes";
 
 ---
 
-
-
-
-
 ##sample data format (in bd.json)
 {
   "recipes": [
@@ -141,11 +137,14 @@ const BASE_URL = "http://localhost:3000/recipes";
   ]
 }
 
+---
+
 ##Author 
 Ann Ngatia
 SDF-FT14B Individual Capstone Project
 Moringa School - Software Engineering Program
 
+---
 ##License
 This project is licensed for educational purposes under the Mornga School guidelines.
 
