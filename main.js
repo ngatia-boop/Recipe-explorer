@@ -12,13 +12,26 @@ const modalInstructions = document.getElementById("modalInstructions");
 const closeButton    = document.querySelector(".close-button");
 
 function openRecipeModal(recipe) {
-  modalTitle.textContent        = recipe.name;
-  modalImage.src                = recipe.image;
-  modalCategory.textContent     = recipe.category || "—";
-  modalIngredients.textContent  = recipe.ingredients.join(", ");
-  modalInstructions.textContent = recipe.instructions;
+
+  console.log("Recipe opening in modal:", recipe); //add here
+
+  const name         = recipe.name        || recipe.title || "Untitled Recipe";
+  const img          = recipe.image       || "https://via.placeholder.com/300x200?text=No+Image";
+  const category     = recipe.category    || "—";
+  const ingredients  = Array.isArray(recipe.ingredients)
+                        ? recipe.ingredients.join(", ")
+                        : (recipe.ingredients || "—");     
+  const instructions = recipe.instructions || "—";
+
+  modalTitle.textContent        = name;
+  modalImage.src                = img;
+  modalCategory.textContent     = category;
+  modalIngredients.textContent  = ingredients;
+  modalInstructions.textContent = instructions;
+
   modal.classList.remove("hidden");
 }
+
 
 closeButton.addEventListener("click", () => modal.classList.add("hidden"));
 
